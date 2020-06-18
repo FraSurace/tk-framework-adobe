@@ -298,7 +298,7 @@ def _validate_args(args):
         import sgtk as imported_sgtk
         global sgtk
         sgtk = imported_sgtk
-    except Exception, e:
+    except Exception as e:
         raise Exception("Error import supplied core: %s" % (e,))
 
     # setup the logger for use from here on out
@@ -312,7 +312,7 @@ def _validate_args(args):
         global logger
         logger = sgtk.LogManager.get_logger("build_extension")
 
-    except Exception, e:
+    except Exception as e:
         raise Exception("Error creating toolkit logger: %s" % (e,))
 
     logger.info("Validating command line arguments...")
@@ -431,8 +431,8 @@ if __name__ == "__main__":
     exit_code = 1
     try:
         exit_code = main()
-    except Exception, e:
-        print "ERROR: %s" % (e,)
+    except Exception as e:
+        print ("ERROR: %s" % (e,))
     else:
         logger.info("Extension successfully built!")
 
