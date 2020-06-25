@@ -137,59 +137,74 @@ def _parse_args():
     )
 
     parser.add_argument(
-        "--core", "-c",
-        metavar="../../../app_store/tk-core",
+        "--core",
+        "-c",
+        metavar="/path/to/tk-core",
         help="The path to tk-core to use when building the toolkit plugin.",
         required=True,
     )
 
     parser.add_argument(
-        "--plugin_name", "-p",
-        metavar="basic",
+        "--plugin_name",
+        "-p",
+        metavar="name",
         help="The name of the engine plugin to build. Ex: 'basic'.",
         required=True,
     )
 
     parser.add_argument(
-        "--extension_name", "-e",
-        metavar="com.sg.basic.adobe",
+        "--extension_name",
+        "-e",
+        metavar="name",
         help="The name of the output extension. Ex: 'com.sg.basic.ps'",
         required=True,
     )
 
     parser.add_argument(
-        "--sign", "-s",
+        "--sign",
+        "-s",
         nargs=3,
-        metavar=("./ZXPSignCmd", ".", "Somospolvode*"),
-        help=("If supplied, sign the build extension. Requires 3 arguments: "
-              "the path to the 'ZXPSignCmd', the certificate and the password."
-              "Note, the ZXPSignCmd can be downloaded here: "
-              "http://labs.adobe.com/downloads/extensionbuilder3.html"),
+        metavar=("/path/to/ZXPSignCmd", "/path/to/certificate", "password"),
+        help=(
+            "If supplied, sign the build extension. Requires 3 arguments: "
+            "the path to the 'ZXPSignCmd', the certificate and the password."
+            "Note, the ZXPSignCmd can be downloaded here: "
+            "http://labs.adobe.com/downloads/extensionbuilder3.html"
+        ),
     )
 
     parser.add_argument(
-        "--bundle_cache", "-b",
+        "--bundle_cache",
+        "-b",
         action="store_true",
-        help=("If supplied, include the 'bundle_cache' directory in the build "
-              "plugin. If not, it is removed after the build."),
+        help=(
+            "If supplied, include the 'bundle_cache' directory in the build "
+            "plugin. If not, it is removed after the build."
+        ),
     )
 
     parser.add_argument(
-        "--version", "-v",
+        "--version",
+        "-v",
         metavar="v#.#.#",
-        help=("The version to attached to the built plugin. If not specified, "
-              "the version will be set to 'dev' and will override any version "
-              "of the extension at launch/install time. The current version "
-              "can be found in the .version file that lives next to the "
-              "existing .zxp file.")
+        help=(
+            "The version to attached to the built plugin. If not specified, "
+            "the version will be set to 'dev' and will override any version "
+            "of the extension at launch/install time. The current version "
+            "can be found in the .version file that lives next to the "
+            "existing .zxp file."
+        ),
     )
 
     parser.add_argument(
-        "--output_dir", "-o",
-        metavar="..",
-        help=("If supplied, output the built extension here. If not supplied, "
-              "the extension will be built in the engine directory at the top "
-              "level."),
+        "--output_dir",
+        "-o",
+        metavar="/path/to/output/extension",
+        help=(
+            "If supplied, output the built extension here. If not supplied, "
+            "the extension will be built in the engine directory at the top "
+            "level."
+        ),
     )
 
     return parser.parse_args()

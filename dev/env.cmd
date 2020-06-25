@@ -13,7 +13,7 @@ set "PYTHON_EXE=python"
 
 rem DO NOT COMMIT THE FOLLOWING LINES TO THE REPO
 rem set this to your certificate file, that you created / will create
-set "CERTIFICATE_FILE=."
+rem set "CERTIFICATE_FILE=./certificate"
 rem set this to the password that you chose/want to chose for your certificate file
 rem the following options are needed, when you want to create a new certificate
 set "CERTIFICATE_PASS=Somospolvode*"
