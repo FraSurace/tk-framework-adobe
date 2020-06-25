@@ -138,21 +138,21 @@ def _parse_args():
 
     parser.add_argument(
         "--core", "-c",
-        metavar="/path/to/tk-core",
+        metavar="../../../app_store/tk-core",
         help="The path to tk-core to use when building the toolkit plugin.",
         required=True,
     )
 
     parser.add_argument(
         "--plugin_name", "-p",
-        metavar="name",
+        metavar="basic",
         help="The name of the engine plugin to build. Ex: 'basic'.",
         required=True,
     )
 
     parser.add_argument(
         "--extension_name", "-e",
-        metavar="name",
+        metavar="com.sg.basic.adobe",
         help="The name of the output extension. Ex: 'com.sg.basic.ps'",
         required=True,
     )
@@ -160,7 +160,7 @@ def _parse_args():
     parser.add_argument(
         "--sign", "-s",
         nargs=3,
-        metavar=("/path/to/ZXPSignCmd", "/path/to/certificate", "password"),
+        metavar=("./ZXPSignCmd", ".", "Somospolvode*"),
         help=("If supplied, sign the build extension. Requires 3 arguments: "
               "the path to the 'ZXPSignCmd', the certificate and the password."
               "Note, the ZXPSignCmd can be downloaded here: "
@@ -186,7 +186,7 @@ def _parse_args():
 
     parser.add_argument(
         "--output_dir", "-o",
-        metavar="/path/to/output/extension",
+        metavar="..",
         help=("If supplied, output the built extension here. If not supplied, "
               "the extension will be built in the engine directory at the top "
               "level."),

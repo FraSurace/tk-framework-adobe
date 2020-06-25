@@ -6,26 +6,26 @@ rem set this to the core you are working with. eg:0.18.160
 rem set "TKCORE_VERSION=v0.19.11"
 rem if you want to use tk-core from a non default bundle-cache location,
 rem uncomment the following line and set your path accordingly.
-rem set "TKCORE_FOLDER=C:\\Users\\francesco\\AppData\\Roaming\\Shotgun\\bundle_cache\\app_store\\tk-core"
+rem set "TKCORE_FOLDER=../../../app_store\\tk-core"
 
-set "ZXP_SIGN_TOOL=%APPDATA%\\Shotgun\\bundle_cache\\git\\tk-framework-adobe\\v1.0.4\\dev\\ZXPSignCmd.exe"
+set "ZXP_SIGN_TOOL=./ZXPSignCmd"
 set "PYTHON_EXE=python"
 
 rem DO NOT COMMIT THE FOLLOWING LINES TO THE REPO
 rem set this to your certificate file, that you created / will create
-set "CERTIFICATE_FILE=%APPDATA%\\Shotgun\\bundle_cache\\git\\tk-framework-adobe\\v1.0.4\\dev"
+set "CERTIFICATE_FILE=."
 rem set this to the password that you chose/want to chose for your certificate file
 rem the following options are needed, when you want to create a new certificate
 set "CERTIFICATE_PASS=Somospolvode*"
-set "CERT_COUNTRY="
-set "CERT_STATE="
-set "CERT_ORG="
-set "CERT_CN="
+set "CERT_COUNTRY=VLC"
+set "CERT_STATE=Spain"
+set "CERT_ORG=La Tribu Animation S.L."
+set "CERT_CN=000000"
 
 rem optional certificate fields (uncomment if desired)
-set "CERT_LOCALITY="
-set "CERT_ORG_UNIT="
-set "CERT_EMAIL="
-set "CERT_VALIDITY_DAYS="
+rem set "CERT_LOCALITY="
+rem set "CERT_ORG_UNIT="
+rem set "CERT_EMAIL="
+rem set "CERT_VALIDITY_DAYS="
 
 
