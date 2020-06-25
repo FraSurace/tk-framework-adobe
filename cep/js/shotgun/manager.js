@@ -171,15 +171,12 @@ sg_manager.Manager = new function() {
 
     // Tests whether the extension can run with the current application
     const _app_is_supported = function() {
+        return true;
 
         // supported if the panel menu and html extensions are available
         const host_capabilities = _cs_interface.getHostCapabilities();
-        
-        // premiere seems to support this so just return true
-       if (_cs_interface.getApplicationID() == "PPRO") {
-           return true;
-        } else if (host_capabilities.EXTENDED_PANEL_MENU && host_capabilities.SUPPORT_HTML_EXTENSIONS) {
-            return true;    };
+        return host_capabilities.EXTENDED_PANEL_MENU &&
+            host_capabilities.SUPPORT_HTML_EXTENSIONS;
     };
 
     const _active_document_check = function(event) {
