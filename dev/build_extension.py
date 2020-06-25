@@ -12,6 +12,7 @@
 
 from __future__ import print_function
 import sys
+sys.path.append("C:\\Users\\francesco\\AppData\\Roaming\\\Shotgun\\latribu\\site.basic.desktop\\cfg\\install\\core\\python")
 
 sys.dont_write_bytecode = True
 

@@ -1,19 +1,19 @@
 
 rem set this to the target version you want to set this to
-set "TARGET_VERSION=0.0.1"
+set "TARGET_VERSION=1.0.4"
 
 rem set this to the core you are working with. eg:0.18.160
 set "TKCORE_VERSION=0.19.11"
 rem if you want to use tk-core from a non default bundle-cache location,
 rem uncomment the following line and set your path accordingly.
-rem set "TKCORE_FOLDER=%APPDATA%\Shotgun\bundle_cache\app_store\tk-core"
+set "TKCORE_FOLDER=%APPDATA%\Shotgun\bundle_cache\app_store\tk-core"
 
-set "ZXP_SIGN_TOOL=./ZXPSignCmd"
+set "ZXP_SIGN_TOOL=C:\Users\francesco\Documents\GitHub\tk-framework-adobe\dev\ZXPSignCmd.exe"
 set "PYTHON_EXE=python"
 
 rem DO NOT COMMIT THE FOLLOWING LINES TO THE REPO
 rem set this to your certificate file, that you created / will create
-rem set "CERTIFICATE_FILE=./certificate"
+set "CERTIFICATE_FILE="C:\Users\francesco\Documents\GitHub\tk-framework-adobe\dev\certificate"
 rem set this to the password that you chose/want to chose for your certificate file
 rem the following options are needed, when you want to create a new certificate
 set "CERTIFICATE_PASS=Somospolvode*"
