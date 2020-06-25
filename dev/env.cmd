@@ -1,6 +1,6 @@
 
 rem set this to the target version you want to set this to
-set "TARGET_VERSION=1.0.4"
+set "TARGET_VERSION=0.0.1"
 
 rem set this to the core you are working with. eg:0.18.160
 rem set "TKCORE_VERSION=v0.19.11"
@@ -13,7 +13,7 @@ set "PYTHON_EXE=python"
 
 rem DO NOT COMMIT THE FOLLOWING LINES TO THE REPO
 rem set this to your certificate file, that you created / will create
-set "CERTIFICATE_FILE=%APPDATA%\\Shotgun\\bundle_cache\\git\\tk-framework-adobe\\v1.0.4\\certificate"
+set "CERTIFICATE_FILE=%APPDATA%\\Shotgun\\bundle_cache\\git\\tk-framework-adobe\\v1.0.4\\dev"
 rem set this to the password that you chose/want to chose for your certificate file
 rem the following options are needed, when you want to create a new certificate
 set "CERTIFICATE_PASS=Somospolvode*"
