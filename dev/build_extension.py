@@ -325,7 +325,7 @@ def _validate_args(args):
         global logger
         logger = sgtk.LogManager.get_logger("build_extension")
 
-    except Exception, e:
+    except Exception as e:
         raise Exception("Error creating toolkit logger: %s" % (e,))
 
     logger.info("Validating command line arguments...")
